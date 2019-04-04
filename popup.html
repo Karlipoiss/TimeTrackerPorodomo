@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Time tracker</title>
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <h1>Time tracker</h1>
+	<form id="objective">
+	  My objective: <input id="obj" type="text" value="">
+	</form>
+    <input id="startPomodoro" type="button" value="Start a pomodoro"/>
+	<p id="timer"></p>
+	<input id="endPomodoro" type="button" value="End a pomodoro"/>
+	<form id="settings">
+	  Work time: (0 - 59min) <input id="work" type="text" value="25"><br>
+	  Break time: (0 - 59min) <input id="break" type="text" value="5"><br>
+	  <p>Work + break <= 59min</p>
+	  Long break: <input id="long" type="text" value="4"><br>
+	  <input id="settingsSave" type="button" value="Save settings"/>
+	  <input id="default" type="button" value="Default settings"/>
+	</form>
+
+  </body>
+</html>

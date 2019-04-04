@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "Time tracker",
+  "description": "This extension will help you track your time",
+  "version": "1.0",
+
+  "browser_action": {
+   "default_icon": "clock.png",
+   "default_popup": "popup.html"
+  },
+  "permissions": [
+   "tabs"
+   ],
+   "background": {
+	"scripts":["background.js"]
+   }
+}
