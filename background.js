@@ -23,7 +23,7 @@ function startLoop() {
     }, 1000);
 }
 
-function timerStartedB(endDate, breakTime) {
+function timerStartedB(endDate, breakTime) { //timer that opens a new tab when break and breakover
     localStorage.setItem("alreadyStarted", 1);
     window.timerB = setInterval(function () {
         console.log("ringtehtud")

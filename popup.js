@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {
     if (null === workTime) {
         defaultSettings();
     }
-    var breakTime = localStorage.getItem("breakTimeCurrent");
-    workTime = localStorage.getItem("workTime");
+    var breakTime = localStorage.getItem("breakTimeCurrent"); //different than breakTime because sometimes longer break
+    workTime = localStorage.getItem("workTime"); //but dont want to change default breaktime
 
     var endDate = localStorage.getItem("endDate");
     console.log(endDate + " " + breakTime)
@@ -31,7 +31,7 @@ function startPomodoro() {
     localStorage.setItem("currentPomo", newPomo);
     var longerBreak = Number(localStorage.getItem("longBreak"));
     var breakTime = null;
-    if (newPomo >= longerBreak) {
+    if (newPomo >= longerBreak) { //checks whether its time for long break
         breakTime = 30;
         localStorage.setItem("currentPomo", 0);
         localStorage.setItem("breakTimeCurrent", breakTime);
@@ -70,7 +70,7 @@ function displayDefaultTimer(workTime) {
     document.getElementById("timer").innerHTML = workTime + "m 0s";
 }
 
-function timerStarted(endDate, breakTime) {
+function timerStarted(endDate, breakTime) { //timer that displays countdown when popup open
     document.getElementById("obj").value = localStorage.getItem("myObjtext");
     document.getElementById("obj").disabled = true;
     document.getElementById("startPomodoro").value = "Ongoing pomodoro";
